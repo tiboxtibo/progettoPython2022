@@ -237,6 +237,7 @@ def avvia(word1,word2):
     CamminoMin = cammino
 
     i=0
+    #facciamo tre tentativi e teniamo il percorso minore
     while(i<3):
         cammino = percorso(word1, word2)
 
@@ -253,7 +254,7 @@ def avvia(word1,word2):
                 print("Imposto la profondità dell'albero di ricerca a 5")
                 print(cammino2)
                 # print("lunghezza cammino:", len(cammino2))
-                if (False):  # TODO per ora è bloccato
+                if (False):  # TODO per ora è bloccato -> if (cammino2 == None)
                     Var4 = True
                     cammino3 = percorso(word1, word2)
                     print("Imposto la profondità dell'albero di ricerca a 6")

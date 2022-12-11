@@ -2,19 +2,27 @@
 Matteo Tiboldo e Salvatore La Rosa
 
 #Sviluppo progetto
-Allora l'idea era di prendere la prima parola e di cercare all'interno del dizionario tutte le parole che differiscono per una singola lettera
+Allora l'idea era di prendere la prima parola e di cercare all'interno del dizionario tutte le parole "vicine" 
+ovvero che seguono le determinate regole:
+	
 	Le operazioni che possiamo fare sono
-	
-- aggiungere una lettera e quindi trovare una parola che ha solo una lettera in più
-- togliere una lettera e quindi trovare solo una parola che ha una lettera in meno
-- modificare una lettera e quindi trovare una parola che ha le stesse lettere tranne una che modifichiamo
-- trovare una parola che è l'anagramma , ovvero che ha le stesse lettere dell'altra solo in posizione diversa
+		- aggiungere una lettera e quindi trovare una parola che ha solo una lettera in più
+		- togliere una lettera e quindi trovare solo una parola che ha una lettera in meno
+		- modificare una lettera e quindi trovare una parola che ha le stesse lettere tranne una che modifichiamo
+		- trovare una parola che è l'anagramma , ovvero che ha le stesse lettere dell'altra solo in posizione diversa
 
-	Ora dobbiamo salvare all'interno di un array temporaneo la sequenza di parole trovate per arrivare ad ottenere la seconda parola
-	poi confrontiamo questo array con l'array minimo che abbiamo trovato
-	resettiamo infine l'array temporaneo per un nuovo ciclo
-	
-infine scriviamo l'array più corto che abbiamo trovato, ovvero la sequenza di parole più corta
+Ora salviamo in un'array temporaneo tutte le parole "vicine"(ovvero che seguono almeno una di queste regole)
+Prendiamo poi una di queste in modo casuale e ricreiamo un dizionario di parole simili anche per questa;
+Eseguiamo questa operazione fino ad una profondità di 3, poi proseguiamo dall'inizio con nuove parole
+
+Se alla fine non troviamo la seconda parola dentro nessun dizionario modifichiamo la profondità dell'albero di ricerca
+e riproviamo (per ora la profondità dell'albero di ricerca è bloccata a 5 -> poichè ci metteva troppo tempo)
+
+Quando non troviamo la seconda parola in un dizionario da noi creato di parole "vicine" 
+    -> interrmpiamo tutto e restituiamo stampiamo il percorso con la sua lunghezza e la profondità usata
+
+Per il momento facciamo tre cicli e stampiamo il percorso più breve trovato, ma se ne possono fare quanti se ne vuole per
+una maggiore sicurezza
 
 #Consegna
 ##Progetto per il linguaggio python:
